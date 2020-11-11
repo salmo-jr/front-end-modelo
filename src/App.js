@@ -1,10 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
+import Formulario from './componentes/Formulario/Formulario';
 
 function App() {
   return (
     <div className="App">
-      <h1>Olá TI Noite!</h1>
+        <div>Cabeçalho</div>
+        <Formulario titulo="Formulário de Cadastro" />
+        <div>Rodapé</div>
     </div>
   );
 }
