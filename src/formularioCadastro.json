@@ -1,0 +1,9 @@
+{
+    "titulo": "Formulário de Cadastro",
+    "campos": [
+        { "label": "Nome", "type": "text", "id": "nome" },
+        { "label": "CPF", "type": "text", "id": "cpf" },
+        { "label": "Telefone", "type": "text", "id": "telefone" },
+        { "label": "UF", "type": "select", "id": "uf" }
+    ]
+}

@@ -1,10 +1,11 @@
 import Formulario from './componentes/Formulario/Formulario';
+import FormCadastro from './formularioCadastro.json';
 
 function App() {
   return (
     <div className="App">
         <div>Cabeçalho</div>
-        <Formulario titulo="Formulário de Cadastro" />
+        <Formulario info={FormCadastro} />
         <div>Rodapé</div>
     </div>
   );
