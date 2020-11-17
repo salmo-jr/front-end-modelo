@@ -1,0 +1,14 @@
+{
+    "nome": "Jão",
+    "email": "jao@gmail.com",
+    "senha": "123456",
+    "cpf": "111.222.333-44",
+    "telefone": "16 3387-7665",
+    "celular": "16 99887-7665",
+    "rua": "Rua Asfaltada",
+    "numero": "45A",
+    "bairro": "Feliz",
+    "cep": "13564098",
+    "cidade": "Hello World",
+    "uf": "React"
+}

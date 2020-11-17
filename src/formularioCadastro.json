@@ -1,9 +1,29 @@
 {
     "titulo": "Formulário de Cadastro",
     "campos": [
-        { "label": "Nome", "type": "text", "id": "nome" },
-        { "label": "CPF", "type": "text", "id": "cpf" },
-        { "label": "Telefone", "type": "text", "id": "telefone" },
-        { "label": "UF", "type": "select", "id": "uf" }
+        { "label": "Nome", "type": "text",
+            "atributos": {
+                "id": "nome", "name": "nome", "required": "required"
+            }
+        },
+        { "label": "CPF", "type": "text",
+            "atributos": {
+                "id": "cpf", "name": "cpf", "placeholder": "999.999.999-99"
+            }
+        },
+        { "label": "Telefone", "type": "text",
+            "atributos": {
+                "id": "telefone", "name": "telefone"
+            }
+        },
+        { "label": "UF", "type": "select",
+            "atributos": {
+                "id": "uf", "name": "uf", "defaultValue": "sp"
+            },
+            "opcoes": [
+                {"value": "rj", "legend": "Rio Janeiro"},
+                {"value": "sp", "legend": "São Paulo"}
+            ]
+        }
     ]
 }

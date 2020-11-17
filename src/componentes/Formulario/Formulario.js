@@ -6,9 +6,9 @@ const formulario = (props) => {
         <form>
             <h1>{ props.info.titulo }</h1>
             {
-                props.info.campos.map((campo) => {
+                props.info.campos.map((campo, i) => {
                     return (
-                        <Campo especificacao={campo} />
+                        <Campo key={i} especificacao={campo} />
                     )
                 })
             }
