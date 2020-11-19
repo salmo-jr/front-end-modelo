@@ -1,8 +1,12 @@
 import React from 'react';
+import HeaderPage from '../../componentes/HeaderPage/HeaderPage';
 
-const home = () => {
+const home = (props) => {
     return(
-        <h1>Home</h1>
+        <div>
+            <HeaderPage navActive={props.path} />
+            <h1>Home</h1>
+        </div>
     );
 }
 

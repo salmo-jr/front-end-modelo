@@ -1,10 +1,14 @@
 import React from 'react';
+import HeaderPage from '../../componentes/HeaderPage/HeaderPage';
 import Formulario from '../../componentes/Formulario/Formulario';
 import formCadastro from './formularioCadastro.json';
 
-const cadastroCliente = () => {
+const cadastroCliente = (props) => {
     return(
-        <Formulario info={formCadastro} />
+        <div>
+            <HeaderPage navActive={props.path} />
+            <Formulario info={formCadastro} />
+        </div>
     );
 }
 

@@ -7,13 +7,13 @@ const routes = () => {
     return(
         <Switch>
             <Route path='/cadastroCliente'>
-                <CadastroCliente />
+                <CadastroCliente  path='/cadastroCliente' />
             </Route>
             <Route path='/cardapio'>
-                <CadastroCliente />
+                <CadastroCliente path='/cardapio' />
             </Route>
             <Route path='/'>
-                <Home />
+                <Home path='/' />
             </Route>
         </Switch>
     );

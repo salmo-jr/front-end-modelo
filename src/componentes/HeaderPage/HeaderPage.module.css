@@ -1,0 +1,17 @@
+.Logo{
+    width: 10vw;
+}
+
+.Notifications{
+    display: flex;
+    align-items: flex-end;
+}
+
+.Notifications *{
+    margin-right: 15px;
+    height: 100%;
+}
+
+.Counter{
+    margin-left: -20px;
+}
