@@ -3,7 +3,12 @@
     "campos": [
         { "label": "Nome", "type": "text",
             "atributos": {
-                "id": "nome", "name": "nome", "required": "required"
+                "id": "name", "name": "name", "required": "required"
+            }
+        },
+        { "label": "E-mail", "type": "email",
+            "atributos": {
+                "id": "email", "name": "email", "required": "required"
             }
         },
         { "label": "CPF", "type": "text",
@@ -11,19 +16,10 @@
                 "id": "cpf", "name": "cpf", "placeholder": "999.999.999-99"
             }
         },
-        { "label": "Telefone", "type": "text",
+        { "label": "Telefone", "type": "tel",
             "atributos": {
-                "id": "telefone", "name": "telefone"
+                "id": "phone", "name": "phone", "required": "required"
             }
-        },
-        { "label": "UF", "type": "select",
-            "atributos": {
-                "id": "uf", "name": "uf", "defaultValue": "sp"
-            },
-            "opcoes": [
-                {"value": "rj", "legend": "Rio Janeiro"},
-                {"value": "sp", "legend": "São Paulo"}
-            ]
         }
     ]
 }
