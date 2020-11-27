@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import ClientContext from './context/ClientContext';
 import Routes from './Routes';
+import api from './api';
 
 class App extends Component{
   state = {
@@ -10,13 +11,26 @@ class App extends Component{
       cpf: '',
       email: '',
       phone: ''
-    }
+    },
+    products: []
   }
 
   handleChangeClient = (event) => {
     const updateClient = {...this.state.client};
     updateClient[event.target.name] = event.target.value;
     this.setState({client: updateClient});
+  }
+
+  createClient = async (event) => {
+    const resp = await api.post('/clients', this.state.client, {
+      headers: {'Content-Type': 'application/json'}
+    });
+    event.preventDefault();
+  }
+
+  listProduct = async () => {
+    const resp = await api.get('/clients');
+    this.setState({products: resp['data']});
   }
   
   render(){
@@ -26,7 +40,10 @@ class App extends Component{
             <ClientContext.Provider
               value={{
                 client: this.state.client,
-                change: this.handleChangeClient
+                products: this.state.products,
+                change: this.handleChangeClient,
+                create: this.createClient,
+                getProducts: this.listProduct
               }}
             >
               <Routes />
