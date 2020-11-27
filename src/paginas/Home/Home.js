@@ -11,9 +11,8 @@ const home = (props) => {
                     return(
                         <div>
                             <h1>Home</h1>
-                            <button onClick={context.getProducts}>Carregar</button>
-                            {context.products.map((p) => {
-                                return <p>{p.name}</p>
+                            {context.products.map((p, index) => {
+                                return <p key={index}>{p.name}</p>
                             })}
                         </div>
                     );

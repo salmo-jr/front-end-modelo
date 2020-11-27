@@ -9,8 +9,7 @@ const clientContext = React.createContext({
     },
     products: [],
     change: () => {},
-    create: () => {},
-    getProducts: () => {}
+    create: () => {}
 });
 
 export default clientContext;

@@ -25,12 +25,19 @@ class App extends Component{
     const resp = await api.post('/clients', this.state.client, {
       headers: {'Content-Type': 'application/json'}
     });
-    event.preventDefault();
   }
 
   listProduct = async () => {
-    const resp = await api.get('/clients');
+    const resp = await api.get('/products', {
+      headers: {
+        'Authorization': 'ti-ara-2019'
+      }
+    });
     this.setState({products: resp['data']});
+  }
+
+  componentDidMount(){
+    this.listProduct();
   }
   
   render(){
@@ -42,8 +49,7 @@ class App extends Component{
                 client: this.state.client,
                 products: this.state.products,
                 change: this.handleChangeClient,
-                create: this.createClient,
-                getProducts: this.listProduct
+                create: this.createClient
               }}
             >
               <Routes />

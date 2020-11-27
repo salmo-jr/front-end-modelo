@@ -7,7 +7,7 @@ const formulario = (props) => {
         <ClientContext.Consumer>
             {context => {
                 return(
-                    <form onSubmit={context.create}>
+                    <form onSubmit={context.create} action='/'>
                         <h1>{props.info.titulo}</h1>
                         {
                             props.info.campos.map((campo, i) => {
