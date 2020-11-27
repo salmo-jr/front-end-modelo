@@ -11,8 +11,8 @@ const home = (props) => {
                     return(
                         <div>
                             <h1>Home</h1>
-                            {context.products.map((p, index) => {
-                                return <p key={index}>{p.name}</p>
+                            {context.products.map((p) => {
+                                return <p key={p.id}>{p.name}</p>
                             })}
                         </div>
                     );

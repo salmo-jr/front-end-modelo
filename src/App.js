@@ -27,7 +27,7 @@ class App extends Component{
     });
   }
 
-  listProduct = async () => {
+  listProducts = async () => {
     const resp = await api.get('/products', {
       headers: {
         'Authorization': 'ti-ara-2019'
@@ -37,7 +37,7 @@ class App extends Component{
   }
 
   componentDidMount(){
-    this.listProduct();
+    this.listProducts();
   }
   
   render(){
